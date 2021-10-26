@@ -10,5 +10,6 @@
 
 ## Technologies used:
 
-- Tkinter ( Python Lib )
+- Tkinter (Python Lib)
 - Python 3.10
+- Git (Version Control)
