@@ -7,7 +7,7 @@ class Main(Tk):
     def __init__(self, min_size, win_title) -> None:
         super().__init__()
         self.minsize(*min_size)
-        self.iconbitmap("./app/resources/favicon.ico")
+        self.iconbitmap("./app/resources/logosigla.ico")
         self.configure(bg="#444444")
         self.title(win_title)
         self.open = None
@@ -44,3 +44,9 @@ class Main(Tk):
     def create_text_editor(self):
         self.code = Text(self, bg="#111111", fg='white', insertbackground='white')
         self.code.place(rely=.1, relwidth=1, relheight=1)
+
+
+a = Main(min_size, gui_title)
+a.create_top_bar()
+a.create_text_editor()
+a.mainloop()
