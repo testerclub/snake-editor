@@ -7,7 +7,7 @@ class Main(Tk):
     def __init__(self, min_size, win_title) -> None:
         super().__init__()
         self.minsize(*min_size)
-        self.iconbitmap("./app/resources/logosigla.ico")
+        self.iconbitmap("./app/resources/winicon.ico")
         self.configure(bg="#444444")
         self.title(win_title)
         self.open = None
