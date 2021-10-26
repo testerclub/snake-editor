@@ -1,7 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
-from pygments import *
-from info import min_size, gui_title, __msg__
+from info import __author__, __ver__, __credits__, __msg__, min_size, gui_title
 
 def show_font_message():
     from tkinter.messagebox import showinfo
@@ -23,29 +22,7 @@ class Main(Tk):
         self.run = None
         self.mainmenu = None
         self.filemenu = None
-        self.editmenu = None
         self.aboutmenu = None
-    
-    def create_menu_bar(self):
-        self.mainmenu = Menu(self)
-        self.filemenu = Menu(self.mainmenu, tearoff=0)
-        self.filemenu.add_command(label="Open")
-        self.filemenu.add_command(label="Save")
-        self.filemenu.add_separator()
-        self.filemenu.add_command(label="Exit", command=exit)
-        self.mainmenu.add_cascade(label="File", menu=self.filemenu)
-
-        self.editmenu = Menu(self.mainmenu, tearoff=0)
-        self.editmenu.add_command(label="Font...")
-        self.editmenu.add_command(label="")
-        self.mainmenu.add_cascade(label="Edit", menu=self.editmenu)
-        
-        self.aboutmenu = Menu(self.mainmenu, tearoff=0)
-        self.aboutmenu.add_command(label="Credits")
-        self.aboutmenu.add_command(label="About Snake Editor")
-        self.mainmenu.add_cascade(label="About", menu=self.aboutmenu)
-        
-        self.config(menu=self.mainmenu)
 
     def create_top_bar(self):
         self.open = Button(self, text="I", font=("Aquawax Pro Pictograms", 30),
@@ -61,7 +38,7 @@ class Main(Tk):
         self.save.place(relx=.1, relwidth=.1, relheight=.1)
 
         self.run = Button(self, text="X", font=("Aquawax Pro Pictograms", 30),
-                            bg='#222222', fg='white', command=exit)
+                            bg='#222222', fg='white', command=self.destroy)
         self.run.bind("<Enter>", lambda event: self.run.configure(bg='gray'))
         self.run.bind("<Leave>", lambda event: self.run.configure(bg='#222222'))
         self.run.place(relx=.8, relwidth=.1, relheight=.1)
@@ -112,6 +89,18 @@ class Credits(Tk):
         super().__init__()
         self.iconbitmap("./app/resources/winicon.ico")
         self.configure(bg="#444444")
-        self.geometry("300x300")
+        self.geometry("500x300")
         self.resizable(False, False)
         self.title("Snake Editor - Credits")
+        self.exit = None
+
+    def create_elements(self):
+        text = Text(self, bg="#111111", fg='white', insertbackground='white',
+                        undo=True)
+        text.place(relheight=1, relwidth=1)
+        text.insert(INSERT, __credits__)
+        self.exit = Button(self, text="X", font=("Aquawax Pro Pictograms", 30),
+                            bg='#222222', fg='white', command=self.destroy)
+        self.exit.bind("<Enter>", lambda event: self.exit.configure(bg='gray'))
+        self.exit.bind("<Leave>", lambda event: self.exit.configure(bg='#222222'))
+        self.exit.place(relx=.85, rely=.85, relwidth=.15, relheight=.15)
