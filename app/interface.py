@@ -1,9 +1,12 @@
 from tkinter import *
 from tkinter import messagebox
 from pygments import *
-from tkinter.messagebox import *
 from info import min_size, gui_title, __msg__
 
+def show_font_message():
+    from tkinter.messagebox import showinfo
+    showinfo(title="Font Warning", message=
+    "This app requires the installation of a font to improve viewing. Please download and install it by following the link below:\n\nhttps://github.com/marc-dantas/snake-editor/blob/main/app/resources/font/Aquawax-Pro-Pictograms-Regular.ttf?raw=true")
 
 class Main(Tk):
 
@@ -85,6 +88,30 @@ class Settings(Tk):
         self.geometry("500x500")
         self.resizable(False, False)
         self.title("Snake Editor - Settings")
+        self.white = None
+        self.black = None
     
     def create_elements(self):
-        pass
+        Label(self, text="Theme Settings", font=("Consolas", 20, 'italic'), fg="white", bg="#444444").place(relx=.05, rely=.05)
+        self.white = Button(self, text="White Theme", font=("Consolas", 15),
+                            bg='#222222', fg='white')
+        self.white.bind("<Enter>", lambda event: self.white.configure(bg='gray'))
+        self.white.bind("<Leave>", lambda event: self.white.configure(bg='#222222'))
+        self.white.place(rely=.15, relx=.05)
+
+        self.black = Button(self, text="Black Theme", font=("Consolas", 15),
+                            bg='#222222', fg='white')
+        self.black.bind("<Enter>", lambda event: self.black.configure(bg='gray'))
+        self.black.bind("<Leave>", lambda event: self.black.configure(bg='#222222'))
+        self.black.place(rely=.25, relx=.05)
+
+
+class Credits(Tk):
+
+    def __init__(self) -> None:
+        super().__init__()
+        self.iconbitmap("./app/resources/winicon.ico")
+        self.configure(bg="#444444")
+        self.geometry("300x300")
+        self.resizable(False, False)
+        self.title("Snake Editor - Credits")
