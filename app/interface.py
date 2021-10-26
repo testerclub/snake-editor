@@ -1,7 +1,9 @@
 from tkinter import *
+from tkinter import messagebox
 from pygments import *
 from tkinter.messagebox import *
 from info import min_size, gui_title, __msg__
+
 
 class Main(Tk):
 
@@ -61,7 +63,7 @@ class Main(Tk):
         self.run.bind("<Leave>", lambda event: self.run.configure(bg='#222222'))
         self.run.place(relx=.8, relwidth=.1, relheight=.1)
 
-        self.settings = Button(self, text="r", font=("Aquawax Pro Pictograms", 30),
+        self.settings = Button(self, text="a", font=("Aquawax Pro Pictograms", 30),
                             bg='#222222', fg='white')
         self.settings.bind("<Enter>", lambda event: self.settings.configure(bg='gray'))
         self.settings.bind("<Leave>", lambda event: self.settings.configure(bg='#222222'))
@@ -74,8 +76,15 @@ class Main(Tk):
         self.code.place(rely=.1, relwidth=1, relheight=1)
 
 
-a = Main(min_size, gui_title)
-a.create_menu_bar()
-a.create_top_bar()
-a.create_text_editor()
-a.mainloop()
+class Settings(Tk):
+
+    def __init__(self) -> None:
+        super().__init__()
+        self.iconbitmap("./app/resources/winicon.ico")
+        self.configure(bg="#444444")
+        self.geometry("500x500")
+        self.resizable(False, False)
+        self.title("Snake Editor - Settings")
+    
+    def create_elements(self):
+        pass
