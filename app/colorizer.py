@@ -1,6 +1,5 @@
 from idlelib.colorizer import ColorDelegator
 from idlelib.percolator import Percolator
-import interface as gui
 
 color_filter = ColorDelegator()
 
