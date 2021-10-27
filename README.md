@@ -13,6 +13,11 @@
 - Python 3.10
 - GitHub Desktop (Git Version Control)
 
-## Authors
+## Authors:
 - [Kmsz](https://github.com/Kamaasoo)
 - [Marcio Dantas](https://github.com/marc-dantas)
+
+## Prerequisites for use (not yet recommended):
+- If you're on a linux distribution, make sure IDLE is installed, if you are unsure run the command `sudo apt install idle-python3.9` in your terminal to get syntax highlighting to work. Same for MAC OS users.
+- This program uses a specific font to be able to show the icons on the screen, if you don't have it installed on your system, the icons won't appear correctly, to download, click [here](https://github.com/marc-dantas/snake-editor/blob/main/app/resources/font/Aquawax-Pro-Pictograms-Regular.ttf?raw=true) to download it.
+- If you're on Microsoft Windows, make sure your python installation includes the IDLE installation, to avoid syntax highlighting not working.
