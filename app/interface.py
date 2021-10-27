@@ -43,33 +43,11 @@ class Main(Tk):
         self.run.bind("<Leave>", lambda event: self.run.configure(bg='#222222'))
         self.run.place(relx=.8, relwidth=.1, relheight=.1)
 
-        self.settings = Button(self, text="a", font=("Aquawax Pro Pictograms", 30),
-                            bg='#222222', fg='white')
-        self.settings.bind("<Enter>", lambda event: self.settings.configure(bg='gray'))
-        self.settings.bind("<Leave>", lambda event: self.settings.configure(bg='#222222'))
-        self.settings.place(relx=.9, relwidth=.1, relheight=.1)
-
     def create_text_editor(self):
         self.code = Text(self, bg=gui_text_editor_bg_color, fg='white', insertbackground='white',
                             undo=True, font=gui_text_editor_font)
         self.code.insert(INSERT, start_msg)
         self.code.place(rely=.1, relwidth=1, relheight=1)
-
-
-class Settings(Tk):
-
-    def __init__(self) -> None:
-        super().__init__()
-        self.iconbitmap("./app/resources/winicon.ico")
-        self.configure(bg=gui_bg_color)
-        self.geometry("500x500")
-        self.resizable(False, False)
-        self.title("Snake Editor - Settings")
-        self.white = None
-        self.black = None
-    
-    def create_elements(self):
-        Label(self, text="Editor Settings", font=("Consolas", 20, 'italic'), fg="white", bg="#444444").place(relx=.05, rely=.05)
 
 
 class Credits(Tk):
