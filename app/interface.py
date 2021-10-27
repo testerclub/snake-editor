@@ -12,7 +12,7 @@ class Main(Tk):
     def __init__(self, min_size, win_title) -> None:
         super().__init__()
         self.minsize(*min_size)
-        self.iconbitmap("./app/resources/winicon.ico")
+        self.iconbitmap("./resources/winicon.ico")
         self.configure(bg=gui_bg_color)
         self.title(win_title)
         self.open = None
@@ -41,7 +41,7 @@ class Main(Tk):
                             bg='#222222', fg='white', command=self.destroy)
         self.run.bind("<Enter>", lambda event: self.run.configure(bg='gray'))
         self.run.bind("<Leave>", lambda event: self.run.configure(bg='#222222'))
-        self.run.place(relx=.8, relwidth=.1, relheight=.1)
+        self.run.place(relx=.9, relwidth=.1, relheight=.1)
 
     def create_text_editor(self):
         self.code = Text(self, bg=gui_text_editor_bg_color, fg='white', insertbackground='white',
@@ -54,7 +54,7 @@ class Credits(Tk):
 
     def __init__(self) -> None:
         super().__init__()
-        self.iconbitmap("./app/resources/winicon.ico")
+        self.iconbitmap("./resources/winicon.ico")
         self.configure(bg=gui_bg_color)
         self.geometry("500x300")
         self.resizable(False, False)
