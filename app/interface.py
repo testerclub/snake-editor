@@ -69,18 +69,7 @@ class Settings(Tk):
         self.black = None
     
     def create_elements(self):
-        Label(self, text="Theme Settings", font=("Consolas", 20, 'italic'), fg="white", bg="#444444").place(relx=.05, rely=.05)
-        self.white = Button(self, text="White Theme", font=("Consolas", 15),
-                            bg='#222222', fg='white')
-        self.white.bind("<Enter>", lambda event: self.white.configure(bg='gray'))
-        self.white.bind("<Leave>", lambda event: self.white.configure(bg='#222222'))
-        self.white.place(rely=.15, relx=.05)
-
-        self.black = Button(self, text="Black Theme", font=("Consolas", 15),
-                            bg='#222222', fg='white')
-        self.black.bind("<Enter>", lambda event: self.black.configure(bg='gray'))
-        self.black.bind("<Leave>", lambda event: self.black.configure(bg='#222222'))
-        self.black.place(rely=.25, relx=.05)
+        Label(self, text="Settings", font=("Consolas", 20, 'italic'), fg="white", bg="#444444").place(relx=.05, rely=.05)
 
 
 class Credits(Tk):
