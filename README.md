@@ -1,6 +1,6 @@
 ![header](https://user-images.githubusercontent.com/90472141/138929686-ace3d03b-72dc-43cf-a708-d2daf735d647.png)
 
-> ⚠️ Status : Under development... testing is not recommended!
+> ### 🚧WARNING🚧: Under development... Testing is not recommended!
 
 # Welcome to Snake Editor!
 ## Hi! This is our repository, we are here to present our new project.
@@ -11,7 +11,7 @@
 
 - Tkinter (Python Lib)
 - Python 3.10
-- Git (Version Control)
+- GitHub Desktop (Git Version Control)
 
 ## Authors
 - [Kmsz](https://github.com/Kamaasoo)
