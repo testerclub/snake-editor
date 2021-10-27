@@ -13,7 +13,7 @@ class Main(Tk):
         super().__init__()
         self.minsize(*min_size)
         self.iconbitmap("./app/resources/winicon.ico")
-        self.configure(bg="#444444")
+        self.configure(bg=gui_bg_color)
         self.title(win_title)
         self.open = None
         self.save = None
@@ -50,8 +50,8 @@ class Main(Tk):
         self.settings.place(relx=.9, relwidth=.1, relheight=.1)
 
     def create_text_editor(self):
-        self.code = Text(self, bg="#111111", fg='white', insertbackground='white',
-                            undo=True)
+        self.code = Text(self, bg=gui_text_editor_bg_color, fg='white', insertbackground='white',
+                            undo=True, font=gui_text_editor_font)
         self.code.insert(INSERT, start_msg)
         self.code.place(rely=.1, relwidth=1, relheight=1)
 
@@ -61,7 +61,7 @@ class Settings(Tk):
     def __init__(self) -> None:
         super().__init__()
         self.iconbitmap("./app/resources/winicon.ico")
-        self.configure(bg="#444444")
+        self.configure(bg=gui_bg_color)
         self.geometry("500x500")
         self.resizable(False, False)
         self.title("Snake Editor - Settings")
@@ -77,7 +77,7 @@ class Credits(Tk):
     def __init__(self) -> None:
         super().__init__()
         self.iconbitmap("./app/resources/winicon.ico")
-        self.configure(bg="#444444")
+        self.configure(bg=gui_bg_color)
         self.geometry("500x300")
         self.resizable(False, False)
         self.title("Snake Editor - Credits")

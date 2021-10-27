@@ -8,13 +8,16 @@ credits_msg = """Credits from Snake Editor:
   - Visual Studio Code | https://code.visualstudio.com
 \n\n\n\n\n\n\n\n\n\n
   Snake Editor - Made in Python, for Python"""
-start_msg = "Welcome to Snake Editor, a python editor inspired by GNU Emacs.\nEnjoy your new favorite editor!\n\nFor more information, press the 'Settings' button in the menu at the top of the window."
+start_msg = "# Welcome to Snake Editor! Start by opening a file.\nfor i in range(10):\n    print('Snake Editor!')"
 gui_min_size = (700, 600)
 gui_title = f"Snake Editor - V.{ver}"
+gui_bg_color = "#1e1e1e"
+gui_text_editor_bg_color = "#0e0e0e"
+gui_text_editor_font = ("Consolas", 12)
 syntax_colors = {
-    'COMMENT': {'foreground': '#5c6b99', 'background': '#282a36'},
-    'KEYWORD': {'foreground': '#ff79c6', 'background': '#282a36'},
-    'BUILTIN': {'foreground': '#4ff57a', 'background': '#282a36'},
-    'STRING': {'foreground': '#34684b', 'background': '#282a36'},
-    'DEFINITION': {'foreground': '#89e6fa', 'background': '#282a36'}
+    'COMMENT': {'foreground': '#386820', 'background': gui_text_editor_bg_color},
+    'KEYWORD': {'foreground': '#5398d4', 'background': gui_text_editor_bg_color},
+    'BUILTIN': {'foreground': '#6fbcef', 'background': gui_text_editor_bg_color},
+    'STRING': {'foreground': '#c9876a', 'background': gui_text_editor_bg_color},
+    'DEFINITION': {'foreground': '#42b79b', 'background': gui_text_editor_bg_color}
 }
