@@ -5,8 +5,7 @@ credits_msg = """Credits from Snake Editor:
   - Tkinter | https://docs.python.org/3/library/tkinter.html
   - GitHub | https://github.com
   - Git (Version Control) | https://git-scm.com
-  - Visual Studio Code | https://code.visualstudio.com
-\n\n\n\n\n\n\n\n\n\n
+  - Visual Studio Code | https://code.visualstudio.com\n\n\n\n\n\n\n\n\n\n
   Snake Editor - Made in Python, for Python"""
 start_msg = "# Welcome to Snake Editor! Start by opening a file.\nfor i in range(10):\n    print('Snake Editor!')"
 gui_min_size = (700, 600)
