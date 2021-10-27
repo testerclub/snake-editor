@@ -10,7 +10,7 @@ credits_msg = """Credits from Snake Editor:
   Snake Editor - Made in Python, for Python"""
 start_msg = "Welcome to Snake Editor, a python editor inspired by GNU Emacs.\nEnjoy your new favorite editor!\n\nFor more information, press the 'Settings' button in the menu at the top of the window."
 gui_min_size = (700, 600)
-gui_title = f"Snake Editor - V.{__ver__}"
+gui_title = f"Snake Editor - V.{ver}"
 syntax_colors = {
     'COMMENT': {'foreground': '#5c6b99', 'background': '#282a36'},
     'KEYWORD': {'foreground': '#ff79c6', 'background': '#282a36'},
