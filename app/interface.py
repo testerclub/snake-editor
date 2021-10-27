@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
-from info import __author__, __ver__, __credits__, __msg__, min_size, gui_title
+from info import *
 
 def show_font_message():
     from tkinter.messagebox import showinfo
@@ -52,7 +52,7 @@ class Main(Tk):
     def create_text_editor(self):
         self.code = Text(self, bg="#111111", fg='white', insertbackground='white',
                             undo=True)
-        self.code.insert(INSERT, __msg__)
+        self.code.insert(INSERT, start_msg)
         self.code.place(rely=.1, relwidth=1, relheight=1)
 
 
@@ -98,7 +98,7 @@ class Credits(Tk):
         text = Text(self, bg="#111111", fg='white', insertbackground='white',
                         undo=True)
         text.place(relheight=1, relwidth=1)
-        text.insert(INSERT, __credits__)
+        text.insert(INSERT, credits_msg)
         self.exit = Button(self, text="X", font=("Aquawax Pro Pictograms", 30),
                             bg='#222222', fg='white', command=self.destroy)
         self.exit.bind("<Enter>", lambda event: self.exit.configure(bg='gray'))
