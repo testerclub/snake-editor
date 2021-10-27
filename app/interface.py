@@ -69,7 +69,7 @@ class Settings(Tk):
         self.black = None
     
     def create_elements(self):
-        Label(self, text="Settings", font=("Consolas", 20, 'italic'), fg="white", bg="#444444").place(relx=.05, rely=.05)
+        Label(self, text="Editor Settings", font=("Consolas", 20, 'italic'), fg="white", bg="#444444").place(relx=.05, rely=.05)
 
 
 class Credits(Tk):
