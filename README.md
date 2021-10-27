@@ -12,3 +12,7 @@
 - Tkinter (Python Lib)
 - Python 3.10
 - Git (Version Control)
+
+## Authors
+- [Kmsz](https://github.com/Kamaasoo)
+- [Marcio Dantas](https://github.com/marc-dantas)
