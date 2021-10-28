@@ -1,5 +1,8 @@
 from tkinter.filedialog import askopenfilename
 from tkinter.messagebox import showinfo
+from idlelib.colorizer import ColorDelegator
+from idlelib.percolator import Percolator
+from info import syntax_colors
 import re
 
 local_path = r""
@@ -33,3 +36,14 @@ def auto_indent(event):
     current_indent = len(match.group(0)) if match else 0
     new_indent = current_indent + 4
     widget.insert("insert", event.char + "\n " * new_indent)
+
+
+def highlight_syntax(root):
+    color_filter = ColorDelegator()
+    color_filter.tagdefs['COMMENT'] = syntax_colors['COMMENT']
+    color_filter.tagdefs['KEYWORD'] = syntax_colors['KEYWORD']
+    color_filter.tagdefs['BUILTIN'] = syntax_colors['BUILTIN']
+    color_filter.tagdefs['STRING'] = syntax_colors['STRING']
+    color_filter.tagdefs['DEFINITION'] = syntax_colors['DEFINITION']
+    Percolator(root.code).insertfilter(color_filter)
+    return color_filter
