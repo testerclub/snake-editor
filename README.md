@@ -40,5 +40,5 @@
   + Welcome messsage - Variable `start_msg`
   + And more...
 
-<p>Customizing this application is not recommended, as if you do something wrong the program may not work properly...<br>
+<p>Customizing this application is not recommended, as if you do something wrong the program may not work properly...
   Everything that is customizable is in the <code>info.py</code> file, so everything mentioned here will refer to it.</p>
