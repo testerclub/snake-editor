@@ -27,7 +27,11 @@
   + Font family - First tuple value (`gui_text_editor_font[0]`);
   + Font size - Second tuple value (`gui_text_editor_font[1]`).<br><br>
 - Syntax colors - Variable `syntax_colors`
-  + 
+  + COMMENT - From `syntax_colors`: background, foreground;
+  + KEYWORD - From `syntax_colors`: background, foreground;
+  + BUILTIN - From `syntax_colors`: background, foreground;
+  + STRING - From `syntax_colors`: background, foreground;
+  + DEFINITION - From `syntax_colors`: background, foreground.
 
 <p>Customizing this application is not recommended, as if you do something wrong the program may not work properly...<br>
   Everything that is customizable is in the <code>info.py</code> file, so everything mentioned here will refer to it.</p>
