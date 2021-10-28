@@ -8,7 +8,6 @@ class Main(Tk):
     def __init__(self, min_size, win_title) -> None:
         super().__init__()
         self.minsize(*min_size)
-        self.iconbitmap("./app/resources/winicon.ico")
         self.configure(bg=gui_bg_color)
         self.title(win_title)
         self.open = None
@@ -53,7 +52,6 @@ class Credits(Tk):
 
     def __init__(self) -> None:
         super().__init__()
-        self.iconbitmap("./app/resources/winicon.ico")
         self.configure(bg=gui_bg_color)
         self.geometry("500x300")
         self.resizable(False, False)
