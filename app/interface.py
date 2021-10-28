@@ -2,10 +2,6 @@ from tkinter import *
 from tkinter import messagebox
 from info import *
 
-def show_font_message():
-    from tkinter.messagebox import showinfo
-    showinfo(title="Font Warning", message=
-    "This app requires the installation of a font to improve viewing. Please download and install it by following the link below:\n\nhttps://github.com/marc-dantas/snake-editor/blob/main/app/resources/font/Aquawax-Pro-Pictograms-Regular.ttf?raw=true")
 
 class Main(Tk):
 
@@ -74,4 +70,3 @@ class Credits(Tk):
         self.exit.bind("<Enter>", lambda event: self.exit.configure(bg='gray'))
         self.exit.bind("<Leave>", lambda event: self.exit.configure(bg='#222222'))
         self.exit.place(relx=.85, rely=.85, relwidth=.15, relheight=.15)
-
