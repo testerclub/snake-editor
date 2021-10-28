@@ -26,7 +26,7 @@
 - Text editor font - Variable `gui_text_editor_font`
   + Font family - First tuple value (`gui_text_editor_font[0]`);
   + Font size - Second tuple value (`gui_text_editor_font[1]`).<br><br>
-- Syntax colors - Variable `syntax_colors`
+- Syntax colors - HEX Colors or CSS Colors
   + COMMENT - From `syntax_colors`: background, foreground;
   + KEYWORD - From `syntax_colors`: background, foreground;
   + BUILTIN - From `syntax_colors`: background, foreground;
