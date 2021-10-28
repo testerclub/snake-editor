@@ -31,7 +31,14 @@
   + KEYWORD - From `syntax_colors`: background, foreground;
   + BUILTIN - From `syntax_colors`: background, foreground;
   + STRING - From `syntax_colors`: background, foreground;
-  + DEFINITION - From `syntax_colors`: background, foreground.
+  + DEFINITION - From `syntax_colors`: background, foreground.<br><br>
+- General customization
+  + Window title - Variable `gui_title`
+  + Window background color - Variable `gui_bg_color`
+  + Text editor background color - Variable `gui_text_editor_bg_color`
+  + Window size - Variable `gui_min_size`
+  + Welcome messsage - Variable `start_msg`
+  + And more...
 
 <p>Customizing this application is not recommended, as if you do something wrong the program may not work properly...<br>
   Everything that is customizable is in the <code>info.py</code> file, so everything mentioned here will refer to it.</p>
