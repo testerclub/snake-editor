@@ -1,5 +1,5 @@
-from tkinter import font
-from tkinter.filedialog import askopenfilename
+from tkinter import Widget, font
+from tkinter.filedialog import askdirectory, askopenfilename
 from tkinter.messagebox import showerror, showinfo
 from idlelib.colorizer import ColorDelegator
 from idlelib.percolator import Percolator
@@ -38,15 +38,14 @@ def save_file(root):
         showerror("Error", "To be able to save a file, you must first open one.")
 
 
-def auto_indent(event):
-    widget = event.widget
-    font = Font(font=widget['font'])
-    line = widget.get("insert linestart", "insert lineend")
-    match = re.match(r'^(\s+)', line)
-    current_indent = len(match.group(0)) if match else 0
-    new_indent = current_indent + 4
-    widget.insert("insert", "\n" + " "*new_indent)
-    return "break"
+def new_file(name):
+    path = askdirectory()
+    try:
+        file = open(r'{}\{}'.format(path, name), 'x')
+        file.close()
+    except FileExistsError:
+        showerror("Error", "The file already exists!")
+    showinfo("Information", "File created successfully!")
 
 
 def highlight_syntax(root):

@@ -13,6 +13,7 @@ gui_min_size = (700, 600)
 gui_title = f"Snake Editor - V.{ver}"
 gui_bg_color = "#1e1e1e"
 gui_text_editor_bg_color = "#0e0e0e"
+gui_text_editor_tab_count = " "*4
 gui_text_editor_font = ("Consolas", 12)
 syntax_colors = {
     'COMMENT': {'foreground': '#386820', 'background': gui_text_editor_bg_color},

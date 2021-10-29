@@ -1,4 +1,5 @@
-from tkinter.constants import NONE
+from tkinter.constants import COMMAND
+from tkinter.font import Font
 import info, engine
 import interface
 
@@ -12,13 +13,22 @@ def open_credits():
     credits_window.create_elements()
     credits_window.mainloop()
 
+def create_file(root):
+    new_file = interface.ask_new_file_name()
+    execution = lambda: engine.new_file(new_file['filename'].get())
+    new_file['button'].configure(command=execution)
+    new_file['window'].mainloop()
+
 
 def apply_functions():
     global main_window
     main_window.credits.configure(command=open_credits)
     main_window.save.configure(command=lambda: engine.save_file(main_window))
     main_window.open.configure(command=lambda: engine.open_file(main_window))
-    main_window.code.bind(":<Return>", engine.auto_indent)
+    main_window.new.configure(command=lambda: create_file(main_window))
+    font = Font(font=main_window.code['font'])
+    tab_count = font.measure(info.gui_text_editor_tab_count)
+    main_window.code.configure(tabs=tab_count)
     engine.highlight_syntax(main_window)
 
 
