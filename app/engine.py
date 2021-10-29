@@ -1,12 +1,14 @@
+from tkinter import font
 from tkinter.filedialog import askopenfilename
 from tkinter.messagebox import showerror, showinfo
 from idlelib.colorizer import ColorDelegator
 from idlelib.percolator import Percolator
 from info import syntax_colors
+from tkinter.font import Font
 import re
 
 local_path = ''
-
+insert_indent = lambda x: x.widget.insert('insert', '    ')
 
 def open_file(root):
     global local_path
@@ -38,6 +40,7 @@ def save_file(root):
 
 def auto_indent(event):
     widget = event.widget
+    font = Font(font=widget['font'])
     line = widget.get("insert linestart", "insert lineend")
     match = re.match(r'^(\s+)', line)
     current_indent = len(match.group(0)) if match else 0

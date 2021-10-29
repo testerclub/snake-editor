@@ -23,7 +23,7 @@ class Main(Tk):
         self.open.bind("<Leave>", lambda event: self.open.configure(bg='#222222'))
         self.open.place(relx=0, relwidth=.07, relheight=.07)
 
-        self.save = Button(self, text="p", font=("Aquawax Pro Pictograms", 30),
+        self.save = Button(self, text="H", font=("Aquawax Pro Pictograms", 30),
                             bg='#222222', fg='white')
         self.save.bind("<Enter>", lambda event: self.save.configure(bg='gray'))
         self.save.bind("<Leave>", lambda event: self.save.configure(bg='#222222'))

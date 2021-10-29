@@ -1,3 +1,4 @@
+from tkinter.constants import NONE
 import info, engine
 import interface
 
@@ -17,7 +18,7 @@ def apply_functions():
     main_window.credits.configure(command=open_credits)
     main_window.save.configure(command=lambda: engine.save_file(main_window))
     main_window.open.configure(command=lambda: engine.open_file(main_window))
-    main_window.code.bind(": <Return>", engine.auto_indent)
+    main_window.code.bind(":<Return>", engine.auto_indent)
     engine.highlight_syntax(main_window)
 
 
