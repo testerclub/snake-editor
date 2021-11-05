@@ -8,7 +8,7 @@ from tkinter.font import Font
 import re
 
 local_path = ''
-insert_indent = lambda x: x.widget.insert('insert', '    ')
+
 
 def open_file(root):
     global local_path

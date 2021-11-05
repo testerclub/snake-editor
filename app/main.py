@@ -25,7 +25,6 @@ def apply_functions():
     main_window.credits.configure(command=open_credits)
     main_window.save.configure(command=lambda: engine.save_file(main_window))
     main_window.open.configure(command=lambda: engine.open_file(main_window))
-    main_window.new.configure(command=lambda: create_file(main_window))
     font = Font(font=main_window.code['font'])
     tab_count = font.measure(info.gui_text_editor_tab_count)
     main_window.code.configure(tabs=tab_count)

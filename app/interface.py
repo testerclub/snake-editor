@@ -13,7 +13,6 @@ class Main(Tk):
         self.title(win_title)
         self.open = None
         self.save = None
-        self.new = None
         self.code = None
         self.exit = None
         self.credits = None
