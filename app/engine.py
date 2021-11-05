@@ -38,16 +38,6 @@ def save_file(root):
         showerror("Error", "To be able to save a file, you must first open one.")
 
 
-def new_file(name):
-    path = askdirectory()
-    try:
-        file = open(r'{}\{}'.format(path, name), 'x')
-        file.close()
-    except FileExistsError:
-        showerror("Error", "The file already exists!")
-    showinfo("Information", "File created successfully!")
-
-
 def highlight_syntax(root):
     color_filter = ColorDelegator()
     color_filter.tagdefs['COMMENT'] = syntax_colors['COMMENT']

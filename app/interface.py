@@ -4,21 +4,6 @@ from tkinter.filedialog import askdirectory, test
 from info import *
 
 
-def ask_new_file_name():
-    window = Tk()
-    window.configure(bg=gui_bg_color)
-    window.title("New...")
-    window.geometry("250x100")
-    window.resizable(False, False)
-    name = Entry(window, bg=gui_text_editor_bg_color, fg='white')
-    name.place(relx=.1, rely=.1, relwidth=.8)
-    ok = Button(window, text="OK", bg='#222222', fg='white')
-    ok.bind("<Enter>", lambda event: ok.configure(bg='gray'))
-    ok.bind("<Leave>", lambda event: ok.configure(bg='#222222'))
-    ok.place(relx=.1, rely=.5, relwidth=.8)
-    return {'filename': name, 'button': ok, 'window': window}
-
-
 class Main(Tk):
 
     def __init__(self, min_size, win_title) -> None:
@@ -45,12 +30,6 @@ class Main(Tk):
         self.save.bind("<Enter>", lambda event: self.save.configure(bg='gray'))
         self.save.bind("<Leave>", lambda event: self.save.configure(bg='#222222'))
         self.save.place(relx=.07, relwidth=.07, relheight=.07)
-
-        self.new = Button(self, text="New File", font=("Consolas", 15),
-                            bg='#222222', fg='white')
-        self.new.bind("<Enter>", lambda event: self.new.configure(bg='gray'))
-        self.new.bind("<Leave>", lambda event: self.new.configure(bg='#222222'))
-        self.new.place(relx=.14, relwidth=.21, relheight=.07)
 
         self.credits = Button(self, text="y", font=("Aquawax Pro Pictograms", 30),
                             bg='#222222', fg='white')
