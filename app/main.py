@@ -1,4 +1,3 @@
-from tkinter.constants import COMMAND
 from tkinter.font import Font
 import info, engine
 import interface
